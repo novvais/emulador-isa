@@ -15,6 +15,10 @@ DADOS_INICIAIS = {
     "extra_test.asm": {20: 15, 21: 4},
 }
 
+RESULTADOS_ESPERADOS = {
+    "required_test.asm": {12: 12, 13: 5},
+    "extra_test.asm": {22: 11, 23: 15},
+}
 
 def main():
     caminho = sys.argv[1] if len(sys.argv) > 1 else "programs/required_test.asm"
@@ -40,6 +44,17 @@ def main():
             print("HALT - execucao encerrada")
             break
 
+    esperados = RESULTADOS_ESPERADOS.get(nome_arquivo, {})
+    if esperados:
+        print("Resultado final:")
+        tudo_certo = True
+        for endereco, esperado in esperados.items():
+            obtido = hw.memory[endereco]
+            status = "OK" if obtido == esperado else "ERRO"
+            print(f"  Mem[{endereco}] = {obtido} (esperado {esperado}) - {status}")
+            if obtido != esperado:
+                tudo_certo = False
+        print("Teste conferido com sucesso." if tudo_certo else "Teste terminou com diferenca.")
 
 if __name__ == "__main__":
     main()
