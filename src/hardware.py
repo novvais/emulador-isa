@@ -15,6 +15,13 @@ class Hardware:
         # 32 posições de memória de dados, todas começando com 0
         self.memory = [0] * MEMORY_SIZE
 
+        # Memória de instruções — recebe o programa carregado
+        self.instructions = []
+
+    def load_program(self, programa):
+        # Carrega o programa (lista de instruções já decodificadas) na memória de instruções
+        self.instructions = programa
+
     def read_register(self, index):
         # R0 é sempre zero (regra da arquitetura, igual ao RISC-V)
         if index == 0:
