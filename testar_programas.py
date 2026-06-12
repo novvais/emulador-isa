@@ -1,3 +1,4 @@
+# testar_programas.py
 # Conferência final dos programas usados na entrega.
 # A ideia aqui não é mostrar cada passo, e sim rodar tudo e ver se a memória
 # terminou com os valores que o enunciado pede.

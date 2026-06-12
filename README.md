@@ -11,7 +11,6 @@ Este projeto e um emulador pequeno de uma ISA didatica, feito para mostrar na pr
 - `programs/required_test.asm`: programa de teste obrigatorio.
 - `programs/extra_test.asm`: segundo programa de teste.
 - `testar_programas.py`: roda os testes da entrega e confere se a memoria final ficou correta.
-- `teste_core.py`: demonstracao menor do core, usada para acompanhar o teste obrigatorio passo a passo.
 
 ## Instrucoes implementadas
 
@@ -42,8 +41,6 @@ Para verificar os dois programas de teste de uma vez:
 ```bash
 python testar_programas.py
 ```
-
-O `teste_core.py` ficou no projeto como uma demonstracao separada da parte de execucao. Ele ajuda a ver o teste obrigatorio andando passo a passo, mas para conferir a entrega completa o melhor caminho e usar `main.py` e `testar_programas.py`.
 
 ## Teste obrigatorio
 
