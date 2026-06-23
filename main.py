@@ -13,11 +13,13 @@ from src.core import executar_instrucao
 DADOS_INICIAIS = {
     "required_test.asm": {10: 7, 11: 5},
     "extra_test.asm": {20: 15, 21: 4},
+    "branch_test.asm": {20: 15, 21: 4},
 }
 
 RESULTADOS_ESPERADOS = {
     "required_test.asm": {12: 12, 13: 5},
     "extra_test.asm": {22: 11, 23: 15},
+    "branch_test.asm": {22: 11},
 }
 
 def formatar_instrucao(instrucao):
