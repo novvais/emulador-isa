@@ -25,6 +25,12 @@ TESTES = [
         "memoria_inicial": {20: 15, 21: 4},
         "esperado": {22: 11, 23: 15},
     },
+    {
+        "nome": "Teste com desvios",
+        "arquivo": "programs/branch_test.asm",
+        "memoria_inicial": {20: 15, 21: 4},
+        "esperado": {22: 11},
+    },
 ]
 
 
